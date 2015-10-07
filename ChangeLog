@@ -1,0 +1,55 @@
+2004-06-02  Thomas Mailund  <mailund@birc.dk>
+
+	* parser.yy: changed parser so it accepts a length and bootstrap
+	value for the out-most edge.
+
+2004-05-04  Thomas Mailund  <mailund@birc.dk>
+
+	* sdist.cc: equal label-sets were not checked for, and this caused
+	a crash-bug.  it has now been fixed
+
+2004-04-16  Thomas Mailund  <mailund@birc.dk>
+
+	* : added #include <cassert> a number of places to avoid compile errors
+
+2004-04-07  Thomas Mailund  <mailund@birc.dk>
+
+	* sdist.cc: added printing of normalized distance and similarity.
+	Bumped to version 1.1.1
+
+2004-03-21  Thomas Mailund  <mailund@birc.dk>
+
+	* set-matcher.hh: removed division-by-zero error when no splits
+	differs between two trees
+
+2004-03-21  Thomas Mailund  <mailund@birc.dk>
+
+	* set-matcher.hh: moved counting to set-matcher and removed
+	result-counter -- we can make some more detailed counting and
+	stuff this way.
+
+2003-10-07  Thomas Mailund  <mailund@birc.dk>
+
+	* configure.in: bumped to 0.1.2
+
+	* sdist.cc (main): bugfix: I wasn't necessarily traversing the
+	trees from the same root, thus the bit-set labelling could be wrong.
+
+	* result-counter.hh: added traversal for collecting the
+	match/non-match statistics.  Previously I was collecting info for
+	t2 vs t1, but printing t1 vs t2.
+
+2003-10-06  Thomas Mailund  <mailund@birc.dk>
+
+	* configure.in: bumped to 0.1.1
+
+	* lexer.ll: changed lexer to accept more forms of leaf-labels.
+
+	* set-matcher-test.cc: updated tests...I forgot to do this when I
+	changed the output of un-supported branches.
+
+2003-10-03  Thomas Mailund  <mailund@birc.dk>
+
+	* sdist.cc (main): catches label-mismatch exceptions so we report
+	it as faulty output rather than just crash.
+
